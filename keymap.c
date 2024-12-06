@@ -37,10 +37,11 @@ void key(uint16_t code) {
     register_mods(HYPER);
     tap_code(code);
     unregister_mods(HYPER);
-    hide_other_apps();
+//     hide_other_apps();
 }
 
-void center_window(void) {
+void center(void) {
+    wait_ms(100);
     register_mods(HYPER);
     tap_code(KC_D);
     unregister_mods(HYPER);
@@ -63,7 +64,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
             case FINDER:
                 key(KC_F);
-                center_window();
+                center();
                 break;
 
             case SLACK:
