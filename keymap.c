@@ -26,69 +26,60 @@ enum apps {
     FINDER
 };
 
-void hide_other_apps(void) {
-    wait_ms(100);
-    register_mods(LG_LA);
-    tap_code(KC_H);
-    unregister_mods(LG_LA);
-}
 
-void key(uint16_t code) {
+void hyper(uint16_t code) {
     register_mods(HYPER);
     tap_code(code);
     unregister_mods(HYPER);
-//     hide_other_apps();
 }
 
 void center(void) {
-    wait_ms(100);
-    register_mods(HYPER);
-    tap_code(KC_D);
-    unregister_mods(HYPER);
+    wait_ms(200);
+    hyper(KC_D);
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
             case IDE:
-                key(KC_I);
+                hyper(KC_I);
                 break;
 
             case BRAVE:
-                key(KC_B);
+                hyper(KC_B);
                 break;
 
             case CHROME:
-                key(KC_R);
+                hyper(KC_R);
                 break;
 
             case FINDER:
-                key(KC_F);
+                hyper(KC_F);
                 center();
                 break;
 
             case SLACK:
-                key(KC_K);
+                hyper(KC_K);
                 break;
 
             case NOTION:
-                key(KC_N);
+                hyper(KC_N);
                 break;
 
             case SPOTIFY:
-                key(KC_S);
+                hyper(KC_S);
                 break;
 
             case BITBUCK:
-                key(KC_T);
+                hyper(KC_T);
                 break;
 
             case JIRA:
-                key(KC_J);
+                hyper(KC_J);
                 break;
 
             case CONFLUE:
-                key(KC_L);
+                hyper(KC_L);
                 break;
 
             default:

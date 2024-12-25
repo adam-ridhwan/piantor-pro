@@ -9,27 +9,26 @@
 #define SYM_SFT LT(SYMBOL, KC_RSFT)
 
 // homerow left keys
-#define SHFT_A SFT_T(KC_A)
-#define CTRL_R CTL_T(KC_R)
-#define OPTN_S OPT_T(KC_S)
-#define CMND_T CMD_T(KC_T)
+#define SHFT_A  SFT_T(KC_A)
+#define CTRL_R  CTL_T(KC_R)
+#define OPTN_S  OPT_T(KC_S)
+#define CMND_T  CMD_T(KC_T)
 
 // homerow right keys
-#define CMND_N CMD_T(KC_N)
-#define OPTN_E OPT_T(KC_E)
-#define CTRL_I CTL_T(KC_I)
-#define SHFT_O SFT_T(KC_O)
+#define CMND_N  CMD_T(KC_N)
+#define OPTN_E  OPT_T(KC_E)
+#define CTRL_I  CTL_T(KC_I)
+#define SHFT_O  SFT_T(KC_O)
 
-#define UNDO LCMD(KC_Z)
-#define REDO LCMD(KC_X)
-#define COPY LCMD(KC_C)
-#define PASTE LCMD(KC_V)
+#define UNDO    LCMD(KC_Z)
+#define REDO    LCMD(KC_X)
+#define COPY    LCMD(KC_C)
+#define PASTE   LCMD(KC_V)
 
-#define HYPER (MOD_LGUI | MOD_LALT | MOD_LCTL | MOD_LSFT)
-// #define MEH   (MOD_LGUI | MOD_LALT | MOD_LCTL)
-#define LG_LA	  (MOD_LGUI | MOD_LALT)
+#define HYPER  (MOD_LGUI | MOD_LALT | MOD_LCTL | MOD_LSFT)
+#define LG_LA  (MOD_LGUI | MOD_LALT)
 
 #define TIL_ENT MEH_T(KC_ENT)
-#define CYCLE RGUI(KC_GRAVE)
+#define CYCLE   RGUI(KC_GRAVE)
 
 #endif
