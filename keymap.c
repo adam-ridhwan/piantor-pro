@@ -1,94 +1,24 @@
 #include QMK_KEYBOARD_H
 #include "definitions.h"
+#include "functions.h"
+#include "enums.h"
 
 // qmk compile -kb beekeeb/piantor_pro -km adamridhwan
 
-enum layers {
-    BASE,
-    NAVIGATION,
-    NUMBER,
-    SYMBOL,
-    JAVASCRIPT,
-    FUNCTION,
-    TILING
-};
-
-enum apps {
-    BRAVE = SAFE_RANGE,
-    IDE,
-    CHROME,
-    SLACK,
-    NOTION,
-    SPOTIFY,
-    BITBUCK,
-    JIRA,
-    CONFLUE,
-    FINDER
-};
-
-
-void hyper(uint16_t code) {
-    register_mods(HYPER);
-    tap_code(code);
-    unregister_mods(HYPER);
-}
-
-void center(void) {
-    wait_ms(200);
-    hyper(KC_D);
-}
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
-        switch (keycode) {
-            case IDE:
-                hyper(KC_I);
-                break;
+        // Debugging output for keycode
+        uprintf("Keycode: %d\n", keycode);
 
-            case BRAVE:
-                hyper(KC_B);
-                break;
-
-            case CHROME:
-                hyper(KC_R);
-                break;
-
-            case FINDER:
-                hyper(KC_F);
-                center();
-                break;
-
-            case SLACK:
-                hyper(KC_K);
-                break;
-
-            case NOTION:
-                hyper(KC_N);
-                break;
-
-            case SPOTIFY:
-                hyper(KC_S);
-                break;
-
-            case BITBUCK:
-                hyper(KC_T);
-                break;
-
-            case JIRA:
-                hyper(KC_J);
-                break;
-
-            case CONFLUE:
-                hyper(KC_L);
-                break;
-
-            default:
-                break;
+        // Pass the keycode to the appropriate functions
+        if (keycode >= 1000 && keycode <= 1009) {
+            open_app(keycode);
+        } else if (keycode >= 2000 && keycode <= 2015) {
+            tile_app(keycode);
         }
     }
     return true;
 }
-
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BASE] = LAYOUT_split_3x6_3(
@@ -163,15 +93,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                              `---------+---------+---------'   '---------+---------+---------`
     ),
 
-//     [TILING] = LAYOUT_split_3x6_3(
-//   //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-//       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
-//   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-//       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
-//   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-//       XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
-//   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-//                                     XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX
-//   //                              `---------+---------+---------'   '---------+---------+---------`
-//     )
+    [TILING] = LAYOUT_split_3x6_3(
+  //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,       MAX   ,  FOUR_1 ,  FOUR_2 ,  FOUR_3 ,  FOUR_4 , XXXXXXX ,
+  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,      MAX_H  ,  HALF_L ,  HALF_C ,  HALF_R ,  BIGGER , XXXXXXX ,
+  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,      MAX_W  , THIRD_L , THIRD_C , THIRD_R , SMALLER , XXXXXXX ,
+  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
+                                    XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX ,  CENTER , XXXXXXX
+  //                              `---------+---------+---------'   '---------+---------+---------`
+    )
 };
