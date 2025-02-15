@@ -1,11 +1,15 @@
+
 #ifndef DEFINITIONS_H
 #define DEFINITIONS_H
 
 // thumb keys
-#define NAV_ESC LT(NAVIGATION, KC_ESC)
+#define EDT     MO(EDITING)
+#define ESC_NAV LT(NAVIGATION, KC_ESC)
 #define JSC_TAB LT(JAVASCRIPT, KC_TAB)
 #define NUM_SPC LT(NUMBER, KC_SPC)
-#define SYM_ENT LT(SYMBOL, KC_ENT)
+#define SYM_BPC LT(SYMBOL, KC_BSPC)
+#define FUN     MO(FUNCTION)
+#define MED_SLH LT(MEDIA, KC_SLSH)
 
 // homerow left keys
 #define SHFT_A  SFT_T(KC_A)
@@ -19,7 +23,20 @@
 #define CTRL_I  CTL_T(KC_I)
 #define SHFT_O  SFT_T(KC_O)
 
+#define H(kc)   HYPR(kc)
 
-#define CYCLE  RGUI(KC_GRAVE)
+// NAVIGATION LAYER
+#define CYCLE   RGUI(KC_GRAVE)
+#define BACK    RGUI(KC_LCBR)
+#define FWRD    RGUI(KC_RCBR)
+#define PREV    RGUI(KC_LBRC)
+#define NEXT    RGUI(KC_RBRC)
+
+// EDITING LAYER
+#define COPY    LGUI(KC_C)
+#define PASTE   LGUI(KC_V)
+#define CUT     LGUI(KC_X)
+#define UNDO    LGUI(KC_Z)
+#define REDO    RSG(KC_Z)
 
 #endif
