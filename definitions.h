@@ -10,7 +10,7 @@
 #define JSC_TAB LT(JAVASCRIPT, KC_TAB)
 #define NUM_SPC LT(NUMBER, KC_SPC)
 #define SYM_BPC LT(SYMBOL, KC_BSPC)
-#define FUN_ENT LT(FUNCTION, KC_ENT)
+#define FUN     MO(FUNCTION)
 #define MED_SLH LT(MEDIA, KC_SLSH)
 
 // homerow left keys

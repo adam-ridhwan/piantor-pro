@@ -107,15 +107,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|---------+---------+---------+---------+---------+---------|  |---------+---------+---------+---------+---------+---------|
       XXXXXXX ,   KC_Z  ,   KC_X  ,   KC_D  ,   KC_C  ,   KC_V  ,      KC_K  ,   KC_H  , KC_COMM ,  KC_DOT , MED_SLH , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|  |---------+---------+---------+---------+---------+---------|
-                                      EDT   , ESC_NAV , JSC_TAB ,    SYM_BPC , NUM_SPC , FUN_ENT
+                                      EDT   , ESC_NAV , JSC_TAB ,    SYM_BPC , NUM_SPC ,   FUN
   //                              `---------+---------+---------'  '---------+---------+---------`
     ),
 
     [NAVIGATION] = LAYOUT_split_3x6_3(
   //,---------+-------------------------------------------------,  ,-----------------------------------------------------------,
-      XXXXXXX , H(KC_Q) , H(KC_W) , H(KC_F) , H(KC_P) , H(KC_B) ,     CYCLE  , KC_HOME ,  KC_UP  ,  KC_END ,    IN   , XXXXXXX ,
+      XXXXXXX , H(KC_Q) , H(KC_W) , H(KC_F) , H(KC_P) , H(KC_B) ,     CYCLE  , KC_HOME ,  KC_UP  ,  KC_END , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|  |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , KC_LSFT , KC_LCTL , KC_LOPT , KC_LCMD , H(KC_G) ,    KC_PGUP , KC_LEFT , KC_DOWN , KC_RGHT ,    OUT  , XXXXXXX ,
+      XXXXXXX , KC_LSFT , KC_LCTL , KC_LOPT , KC_LCMD , H(KC_G) ,    KC_PGUP , KC_LEFT , KC_DOWN , KC_RGHT ,  KC_ENT , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|  |---------+---------+---------+---------+---------+---------|
       XXXXXXX , H(KC_Z) , H(KC_X) , H(KC_D) , H(KC_C) , H(KC_V) ,    KC_PGDN ,   BACK  ,   FWRD  ,   PREV  ,   NEXT  , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|  |---------+---------+---------+---------+---------+---------|
@@ -161,9 +161,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [FUNCTION] = LAYOUT_split_3x6_3(
   //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-      XXXXXXX , KC_CAPS ,  KC_F7  ,  KC_F8  ,  KC_F9  , KC_F12  ,     XXXXXXX ,  CPRT_3 ,  CPRT_4 , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , KC_CAPS ,  KC_F7  ,  KC_F8  ,  KC_F9  , KC_F12  ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------,   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , CW_TOGG ,  KC_F4  ,  KC_F5  ,  KC_F6  , KC_F11  ,     XXXXXXX ,   PRT_3 ,   PRT_4 ,   PRT_5 , XXXXXXX , XXXXXXX ,
+      XXXXXXX , CW_TOGG ,  KC_F4  ,  KC_F5  ,  KC_F6  , KC_F11  ,     XXXXXXX , KC_RGUI , KC_ROPT , KC_RCTL , KC_RSFT , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------,   |---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX ,  KC_F1  ,  KC_F2  ,  KC_F3  , KC_F10  ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , QK_BOOT , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
@@ -173,9 +173,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [EDITING] = LAYOUT_split_3x6_3(
   //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-      XXXXXXX , G(KC_Q) , G(KC_W) ,  SEARCH , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , G(KC_Q) , G(KC_W) ,  SEARCH , G(KC_F) , G(KC_B) ,     XXXXXXX ,  CPRT_3 ,  CPRT_4 , XXXXXXX , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , G(KC_A) , G(KC_R) , G(KC_S) , G(KC_T) , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , G(KC_A) , G(KC_R) , G(KC_S) , G(KC_T) , G(KC_G) ,     XXXXXXX ,   PRT_3 ,   PRT_4 ,   PRT_5 , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
       XXXXXXX ,   REDO  ,   UNDO  ,   CUT   ,   COPY  ,  PASTE  ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
