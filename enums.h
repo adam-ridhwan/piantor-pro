@@ -14,4 +14,8 @@ enum layers {
     MEDIA = 7,
 };
 
+enum custom_keycodes {
+    SEARCH = SAFE_RANGE,
+};
+
 #endif
