@@ -89,7 +89,7 @@ static bool right_mod_active = false;
             if (right_mod_active && (
                 keycode == KC_J || keycode == KC_L || keycode == KC_U || keycode == KC_Y || keycode == KC_M ||
                 keycode == KC_N || keycode == KC_E || keycode == KC_I || keycode == KC_O || keycode == KC_SCLN ||
-                keycode == KC_K || keycode == KC_H || keycode == KC_    COMM || keycode == KC_DOT || keycode == MED_SLH
+                keycode == KC_K || keycode == KC_H || keycode == KC_COMM || keycode == KC_DOT || keycode == MED_SLH
             )) {
                 return false;
             }
