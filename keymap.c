@@ -43,6 +43,9 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+static bool left_mod_active = false;
+static bool right_mod_active = false;
+
     switch (keycode) {
         case SEARCH:
             if (record->event.pressed) {
@@ -51,9 +54,51 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 tap_code16(G(KC_E));
             }
             return false;
+
+        case SHFT_A:
+        case CTRL_R:
+        case OPTN_S:
+        case CMND_T:
+            if (record->event.pressed) {
+                left_mod_active = true;
+            } else {
+                left_mod_active = false;
+            }
+            return true;
+
+        case CMND_N:
+        case OPTN_E:
+        case CTRL_I:
+        case SHFT_O:
+            if (record->event.pressed) {
+                right_mod_active = true;
+            } else {
+                right_mod_active = false;
+            }
+            return true;
+
+        default:
+            if (left_mod_active && (
+                keycode == KC_Q || keycode == KC_W || keycode == KC_F || keycode == KC_P || keycode == KC_B ||
+                keycode == KC_A || keycode == KC_R || keycode == KC_S || keycode == KC_T || keycode == KC_G ||
+                keycode == KC_Z || keycode == KC_X || keycode == KC_D || keycode == KC_C || keycode == KC_V
+            )) {
+                return false;
+            }
+
+            if (right_mod_active && (
+                keycode == KC_J || keycode == KC_L || keycode == KC_U || keycode == KC_Y || keycode == KC_M ||
+                keycode == KC_N || keycode == KC_E || keycode == KC_I || keycode == KC_O || keycode == KC_SCLN ||
+                keycode == KC_K || keycode == KC_H || keycode == KC_    COMM || keycode == KC_DOT || keycode == MED_SLH
+            )) {
+                return false;
+            }
+
+            return true;
     }
-    return true;
 }
+
+
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BASE] = LAYOUT_split_3x6_3(
