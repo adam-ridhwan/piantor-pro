@@ -3,36 +3,27 @@
 
 #define H(kc)   HYPR(kc)
 
-// thumb keys
+// THUMB KEYS
 #define EDT     MO(EDITING)
 #define ESC_NAV LT(NAVIGATION, KC_ESC)
 #define JSC_TAB LT(JAVASCRIPT, KC_TAB)
 #define NUM_SPC LT(NUMBER, KC_SPC)
+#define SYM_BPC LT(SYMBOL, KC_BSPC)
+#define FUN_ENT LT(FUNCTION, KC_ENT)
 #define MED_SLH LT(MEDIA, KC_SLSH)
+#define SCR_Z   LT(SCREENSHOT, KC_Z)
 
-// homerow left keys
+// HOME ROW LEFT KEYS
 #define SHFT_A  SFT_T(KC_A)
 #define CTRL_R  CTL_T(KC_R)
 #define OPTN_S  OPT_T(KC_S)
 #define CMND_T  CMD_T(KC_T)
 
-// homerow right keys
+// HOME ROW RIGHT KEYS
 #define CMND_N  CMD_T(KC_N)
 #define OPTN_E  OPT_T(KC_E)
 #define CTRL_I  CTL_T(KC_I)
 #define SHFT_O  SFT_T(KC_O)
-
-// NUMBER LAYER
- # define ONE  SFT_T(KC_1)
- # define TWO  CTL_T(KC_2)
- # define THR  OPT_T(KC_3)
- # define FOU  CMD_T(KC_4)
- # define FIV  KC_5
- # define SIX  KC_6
- # define SEV  CMD_T(KC_7)
- # define EIG  OPT_T(KC_8)
- # define NIN  CTL_T(KC_9)
- # define ZER  SFT_T(KC_0)
 
 // NAVIGATION LAYER
 #define CYCLE   G(KC_GRAVE)
@@ -50,7 +41,7 @@
 #define UNDO    G(KC_Z)
 #define REDO    G(S(KC_Z))
 
-// FUNCTION LAYER
+// SCREENSHOT LAYER
 #define PRT_3   G(S(KC_3))
 #define PRT_4   G(S(KC_4))
 #define PRT_5   G(S(KC_5))
