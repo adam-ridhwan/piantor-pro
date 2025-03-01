@@ -175,7 +175,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [EDITING] = LAYOUT_split_3x6_3(
   //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-      XXXXXXX , G(KC_Q) , G(KC_W) ,  SEARCH , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , G(KC_Q) , G(KC_W) ,  SEARCH , XXXXXXX , G(KC_B) ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
       XXXXXXX , G(KC_A) , G(KC_R) , G(KC_S) , G(KC_T) , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
