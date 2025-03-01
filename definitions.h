@@ -25,6 +25,20 @@
 #define CTRL_I  CTL_T(KC_I)
 #define SHFT_O  SFT_T(KC_O)
 
+
+// NUMBER LAYER
+
+ # define ONE  SFT_T(KC_1)
+ # define TWO  CTL_T(KC_2)
+ # define THR  OPT_T(KC_3)
+ # define FOU  CMD_T(KC_4)
+ # define FIV  KC_5
+ # define SIX  KC_6
+ # define SEV  CMD_T(KC_7)
+ # define EIG  OPT_T(KC_8)
+ # define NIN  CTL_T(KC_9)
+ # define ZER  SFT_T(KC_0)
+
 // NAVIGATION LAYER
 #define CYCLE   G(KC_GRAVE)
 #define BACK    G(KC_LCBR)

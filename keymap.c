@@ -125,47 +125,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [NUMBER] = LAYOUT_split_3x6_3(
   //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-      XXXXXXX , KC_CAPS ,   KC_7  ,   KC_8  ,   KC_9  , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX ,  KC_F1  ,  KC_F2  ,  KC_F3  ,  KC_F4  ,  KC_F5  ,      KC_F6  ,  KC_F7  ,  KC_F8  ,  KC_F9  ,  KC_F10 , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , CW_TOGG ,   KC_4  ,   KC_5  ,   KC_6  , XXXXXXX ,     XXXXXXX , KC_RGUI , KC_ROPT , KC_RCTL , KC_RSFT , XXXXXXX ,
+      XXXXXXX ,   ONE   ,   TWO   ,   THR   ,   FOU   ,   FIV   ,       SIX   ,   SEV   ,   EIG   ,   NIN   ,   ZER   , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX ,   KC_1  ,   KC_2  ,   KC_3  , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , KC_EXLM ,  KC_AT  , KC_HASH ,  KC_DLR , KC_PERC ,     KC_CIRC , KC_AMPR , KC_ASTR , KC_UNDS , KC_BSLS , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-                                    XXXXXXX ,   KC_0  , XXXXXXX ,     _______ , _______ , XXXXXXX
-  //                              `---------+---------+---------'   '---------+---------+---------`
-    ),
-
-    [SYMBOL] = LAYOUT_split_3x6_3(
-  //,---------+-------------------------------------------------,   ,------------------------------------------------------------,
-      XXXXXXX , KC_TILD , KC_AMPR , KC_ASTR , KC_PIPE , KC_PLUS ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX  , XXXXXXX ,
-  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+----------+---------|
-      XXXXXXX ,  KC_GRV ,  KC_DLR , KC_PERC , KC_CIRC , KC_MINS ,     XXXXXXX , KC_RGUI , KC_ROPT , KC_RCTL , KC_RSFT  , XXXXXXX ,
-  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+----------+---------|
-      XXXXXXX , KC_BSLS , KC_EXLM ,  KC_AT  , KC_HASH , KC_UNDS ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX  , XXXXXXX ,
-  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+----------+---------|
-                                    XXXXXXX , KC_QUOT ,  KC_DQT ,     _______ , _______ , XXXXXXX
+                                    XXXXXXX ,  KC_F11 ,  KC_F12 ,     _______ , _______ , XXXXXXX
   //                              `---------+---------+---------'   '---------+---------+---------`
     ),
 
     [JAVASCRIPT] = LAYOUT_split_3x6_3(
   //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , KC_SCLN , KC_COLN , XXXXXXX , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     KC_PLUS , KC_LBRC , KC_RBRC , KC_QUOT ,  KC_DQT , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , KC_LSFT , KC_LCTL , KC_LOPT , KC_LCMD , XXXXXXX ,     XXXXXXX , KC_LPRN , KC_RPRN , KC_EQUAL,  KC_GT  , XXXXXXX ,
+      XXXXXXX , KC_LSFT , KC_LCTL , KC_LOPT , KC_LCMD , XXXXXXX ,     KC_MINS , KC_LPRN , KC_RPRN ,  KC_EQL ,  KC_GT  , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , KC_LCBR , KC_RCBR , KC_LBRC , KC_RBRC , XXXXXXX ,
-  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-                                    XXXXXXX , XXXXXXX , XXXXXXX ,     _______ , _______ , XXXXXXX
-  //                              `---------+---------+---------'   '---------+---------+---------`
-    ),
-
-    [FUNCTION] = LAYOUT_split_3x6_3(
-  //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-      XXXXXXX , KC_CAPS ,  KC_F7  ,  KC_F8  ,  KC_F9  , KC_F12  ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
-  //|---------+---------+---------+---------+---------+---------,   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , CW_TOGG ,  KC_F4  ,  KC_F5  ,  KC_F6  , KC_F11  ,     XXXXXXX , KC_RGUI , KC_ROPT , KC_RCTL , KC_RSFT , XXXXXXX ,
-  //|---------+---------+---------+---------+---------+---------,   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX ,  KC_F1  ,  KC_F2  ,  KC_F3  , KC_F10  ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , QK_BOOT , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     KC_UNDS , KC_LCBR , KC_RCBR , KC_PIPE ,  KC_GRV , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
                                     XXXXXXX , XXXXXXX , XXXXXXX ,     _______ , _______ , XXXXXXX
   //                              `---------+---------+---------'   '---------+---------+---------`
@@ -173,9 +149,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [EDITING] = LAYOUT_split_3x6_3(
   //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-      XXXXXXX , G(KC_Q) , G(KC_W) ,  SEARCH , G(KC_F) , G(KC_B) ,     XXXXXXX ,  CPRT_3 ,  CPRT_4 , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , G(KC_Q) , G(KC_W) ,  SEARCH , G(KC_F) , G(KC_B) ,     XXXXXXX ,  CPRT_3 ,  CPRT_4 , XXXXXXX , QK_BOOT , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , G(KC_A) , G(KC_R) , G(KC_S) , G(KC_T) , G(KC_G) ,     XXXXXXX ,   PRT_3 ,   PRT_4 ,   PRT_5 , XXXXXXX , XXXXXXX ,
+      XXXXXXX , G(KC_A) , G(KC_R) , G(KC_S) , G(KC_T) , G(KC_G) ,     XXXXXXX ,   PRT_3 ,   PRT_4 ,   PRT_5 ,  KC_ENT , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
       XXXXXXX ,   REDO  ,   UNDO  ,   CUT   ,   COPY  ,  PASTE  ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
@@ -185,7 +161,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [MEDIA] = LAYOUT_split_3x6_3(
   //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-      XXXXXXX , XXXXXXX , KC_MPRV , KC_MPLY , KC_MNXT , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , XXXXXXX , KC_MPLY , KC_MPRV , KC_MNXT , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
       XXXXXXX , XXXXXXX , KC_MUTE , KC_VOLD , KC_VOLU , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
