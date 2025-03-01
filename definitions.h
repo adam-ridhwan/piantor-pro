@@ -1,4 +1,3 @@
-
 #ifndef DEFINITIONS_H
 #define DEFINITIONS_H
 
@@ -9,8 +8,6 @@
 #define ESC_NAV LT(NAVIGATION, KC_ESC)
 #define JSC_TAB LT(JAVASCRIPT, KC_TAB)
 #define NUM_SPC LT(NUMBER, KC_SPC)
-#define SYM_BPC LT(SYMBOL, KC_BSPC)
-#define FUN     MO(FUNCTION)
 #define MED_SLH LT(MEDIA, KC_SLSH)
 
 // homerow left keys
@@ -25,9 +22,7 @@
 #define CTRL_I  CTL_T(KC_I)
 #define SHFT_O  SFT_T(KC_O)
 
-
 // NUMBER LAYER
-
  # define ONE  SFT_T(KC_1)
  # define TWO  CTL_T(KC_2)
  # define THR  OPT_T(KC_3)

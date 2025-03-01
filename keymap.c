@@ -34,7 +34,6 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
         case SHFT_O:
         case ESC_NAV:
         case JSC_TAB:
-        case SYM_BPC:
         case NUM_SPC:
             return true;
         default:
@@ -107,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|---------+---------+---------+---------+---------+---------|  |---------+---------+---------+---------+---------+---------|
       XXXXXXX ,   KC_Z  ,   KC_X  ,   KC_D  ,   KC_C  ,   KC_V  ,      KC_K  ,   KC_H  , KC_COMM ,  KC_DOT , MED_SLH , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|  |---------+---------+---------+---------+---------+---------|
-                                      EDT   , ESC_NAV , JSC_TAB ,    SYM_BPC , NUM_SPC ,   FUN
+                                      EDT   , ESC_NAV , JSC_TAB ,    KC_BSPC , NUM_SPC , KC_CAPS
   //                              `---------+---------+---------'  '---------+---------+---------`
     ),
 
@@ -131,7 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
       XXXXXXX , KC_EXLM ,  KC_AT  , KC_HASH ,  KC_DLR , KC_PERC ,     KC_CIRC , KC_AMPR , KC_ASTR , KC_UNDS , KC_BSLS , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-                                    XXXXXXX ,  KC_F11 ,  KC_F12 ,     _______ , _______ , XXXXXXX
+                                    CW_TOGG ,  KC_F11 ,  KC_F12 ,     _______ , _______ , XXXXXXX
   //                              `---------+---------+---------'   '---------+---------+---------`
     ),
 
