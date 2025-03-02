@@ -127,31 +127,31 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [NUMBER] = LAYOUT_split_3x6_3(
   //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-      XXXXXXX , KC_CAPS ,   KC_7  ,   KC_8  ,   KC_9  , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , G(KC_1) , G(KC_2) , G(KC_3) , G(KC_4) , G(KC_5) ,     G(KC_6) , G(KC_7) , G(KC_8) , G(KC_9) , G(KC_0) , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , CW_TOGG ,   KC_4  ,   KC_5  ,   KC_6  , XXXXXXX ,     XXXXXXX , KC_RGUI , KC_ROPT , KC_RCTL , KC_RSFT , XXXXXXX ,
+      XXXXXXX ,   ONE   ,   TWO   ,  THREE  ,   FOUR  ,   FIVE  ,       SIX   ,  SEVEN  ,  EIGHT  ,   NINE  ,   ZERO  , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX ,   KC_1  ,   KC_2  ,   KC_3  , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
-                                    XXXXXXX ,   KC_0  , XXXXXXX ,     _______ , _______ , XXXXXXX
+                                    XXXXXXX , CW_TOGG , KC_CAPS ,     _______ , _______ , XXXXXXX
   //                              `---------+---------+---------'   '---------+---------+---------`
     ),
 
     [SYMBOL] = LAYOUT_split_3x6_3(
-  //,---------+-------------------------------------------------,   ,------------------------------------------------------------,
-      XXXXXXX , KC_TILD , KC_AMPR , KC_ASTR , KC_PIPE , KC_PLUS ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX  , XXXXXXX ,
-  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+----------+---------|
-      XXXXXXX ,  KC_GRV ,  KC_DLR , KC_PERC , KC_CIRC , KC_MINS ,     XXXXXXX , KC_RGUI , KC_ROPT , KC_RCTL , KC_RSFT  , XXXXXXX ,
-  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+----------+---------|
-      XXXXXXX , KC_BSLS , KC_EXLM ,  KC_AT  , KC_HASH , KC_UNDS ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX  , XXXXXXX ,
-  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+----------+---------|
-                                    XXXXXXX , KC_QUOT ,  KC_DQT ,     _______ , _______ , XXXXXXX
+  //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
+      XXXXXXX ,  TILDE  ,  GRAVE  , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX ,  UNDER  ,   PLUS  , XXXXXXX ,
+  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
+      XXXXXXX ,  EXCLM  ,    AT   ,   HASH  ,  DOLLAR , PERCENT ,      CARET  ,   AMPR  ,   STAR  ,  MINUS  ,  EQUAL  , XXXXXXX ,
+  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
+      XXXXXXX ,   BSLS  , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+  //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
+                                    XXXXXXX ,   QUOT  ,  DQUOT  ,     _______ , _______ , XXXXXXX
   //                              `---------+---------+---------'   '---------+---------+---------`
     ),
 
     [JAVASCRIPT] = LAYOUT_split_3x6_3(
   //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , KC_LBRC , KC_RBRC , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , G(KC_1) , G(KC_2) , G(KC_3) , G(KC_4) , G(KC_5) ,     XXXXXXX , KC_LBRC , KC_RBRC ,   PIPE  , XXXXXXX , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
       XXXXXXX , KC_LSFT , KC_LCTL , KC_LOPT , KC_LCMD , XXXXXXX ,     XXXXXXX , KC_LPRN , KC_RPRN , KC_EQUAL,  KC_GT  , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
@@ -163,11 +163,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [FUNCTION] = LAYOUT_split_3x6_3(
   //,---------+-------------------------------------------------,   ,-----------------------------------------------------------,
-      XXXXXXX , KC_CAPS ,  KC_F7  ,  KC_F8  ,  KC_F9  , KC_F12  ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX ,  KC_F11 ,  KC_F12 , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------,   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , CW_TOGG ,  KC_F4  ,  KC_F5  ,  KC_F6  , KC_F11  ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,
+      XXXXXXX ,    F1   ,    F2   ,    F3   ,    F4   ,    F5   ,        F6   ,    F7   ,    F8   ,    F9   ,   F10   , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------,   |---------+---------+---------+---------+---------+---------|
-      XXXXXXX , XXXXXXX ,  KC_F1  ,  KC_F2  ,  KC_F3  , KC_F10  ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , QK_BOOT , XXXXXXX ,
+      XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , QK_BOOT , XXXXXXX ,
   //|---------+---------+---------+---------+---------+---------|   |---------+---------+---------+---------+---------+---------|
                                     XXXXXXX , XXXXXXX , XXXXXXX ,     XXXXXXX , XXXXXXX , XXXXXXX
   //                              `---------+---------+---------'   '---------+---------+---------`
